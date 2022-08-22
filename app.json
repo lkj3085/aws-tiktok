@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "toktok",
+    "slug": "toktok",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "toktok"
+}
