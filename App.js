@@ -1,14 +1,15 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { SafeAreaView, View } from "react-native";
-import Home from "./src/screens/Home";
+import { SafeAreaView } from "react-native";
+import "react-native-gesture-handler";
+import Navigation from "./src/navigation";
 
 export default function App() {
   return (
     <>
-      <StatusBar style="auto" />
-      <SafeAreaView>
-        <Home />
+      <StatusBar style="light" />
+      <SafeAreaView style={{ flex: 1, backgroundColor: "black" }}>
+        <Navigation />
       </SafeAreaView>
     </>
   );
