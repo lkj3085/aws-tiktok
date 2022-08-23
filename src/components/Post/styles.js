@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     marginRight: 5,
   },
   bottomContainer: {
-    padding: 10,
+    padding: 15,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-end",

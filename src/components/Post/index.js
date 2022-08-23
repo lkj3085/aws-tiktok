@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { TouchableWithoutFeedback, View, Text, Image } from "react-native";
+import {
+  TouchableWithoutFeedback,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import Entypo from "@expo/vector-icons/Entypo";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
@@ -9,13 +15,24 @@ import styles from "./styles";
 
 const Post = (props) => {
   // console.log(props);
-  const { post } = props;
+  // const { post } = props;
+
+  const [post, setPost] = useState(props.post);
+  const [isLiked, setIsLiked] = useState(false);
 
   const [shouldPlay, setShouldPlay] = useState(true);
 
   const onPlayPausePress = () => {
     setShouldPlay(!shouldPlay);
   };
+
+  const onLikePress = () => {
+    // console.warn("like");
+    const likesToAdd = isLiked ? -1 : 1;
+    setPost({ ...post, likes: post.likes + likesToAdd });
+    setIsLiked(!isLiked);
+  };
+
   return (
     <View style={styles.container}>
       <TouchableWithoutFeedback onPress={onPlayPausePress}>
@@ -28,6 +45,7 @@ const Post = (props) => {
             style={styles.video}
             resizeMode="cover"
             repeat={true}
+            isLooping
           />
 
           <View style={styles.uiContainer}>
@@ -39,10 +57,17 @@ const Post = (props) => {
                 }}
               />
 
-              <View style={styles.iconContainer}>
-                <AntDesign name="heart" size={40} color="white" />
+              <TouchableOpacity
+                style={styles.iconContainer}
+                onPress={onLikePress}
+              >
+                <AntDesign
+                  name="heart"
+                  size={40}
+                  color={isLiked ? "red" : "white"}
+                />
                 <Text style={styles.statsLabel}>{post.likes}</Text>
-              </View>
+              </TouchableOpacity>
               <View style={styles.iconContainer}>
                 <FontAwesome name="commenting" size={40} color="white" />
                 <Text style={styles.statsLabel}>{post.comments}</Text>
