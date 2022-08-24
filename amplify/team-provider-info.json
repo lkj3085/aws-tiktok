@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-toktok-dev-112531-authRole",
+      "UnauthRoleArn": "arn:aws:iam::545146090136:role/amplify-toktok-dev-112531-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::545146090136:role/amplify-toktok-dev-112531-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-toktok-dev-112531-deployment",
+      "UnauthRoleName": "amplify-toktok-dev-112531-unauthRole",
+      "StackName": "amplify-toktok-dev-112531",
+      "StackId": "arn:aws:cloudformation:us-east-1:545146090136:stack/amplify-toktok-dev-112531/08d18fd0-2354-11ed-a7ed-1296f2d3ba85",
+      "AmplifyAppId": "d25lv020wunl6j"
+    }
+  }
+}

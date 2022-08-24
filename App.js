@@ -7,7 +7,7 @@ import Navigation from "./src/navigation";
 export default function App() {
   return (
     <>
-      <StatusBar style="light" />
+      <StatusBar hidden={true} />
       <SafeAreaView style={{ flex: 1, backgroundColor: "black" }}>
         <Navigation />
       </SafeAreaView>
